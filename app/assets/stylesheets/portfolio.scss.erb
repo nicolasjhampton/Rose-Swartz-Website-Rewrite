@@ -1,0 +1,44 @@
+#portfolio-data {
+    /* stretch to fit container */
+    width: 100%;
+}
+
+.portfolio {
+    /* creates centered column */
+    display: flex;
+    flex-direction: column;
+
+    /* keeps the portfolio within the layout */
+    overflow-y: scroll;
+
+    /* stretch to fit container */
+    height: 66vh;
+    width: 100%;
+}
+
+.photos {
+    /* makes a overflow carosel */
+    display: flex;
+    overflow-x: scroll;
+    align-items: center;
+
+    /* stops small scrollwheel from appearing for each gallery */
+    overflow-y: hidden;
+}
+
+.photo {
+    /* sets all image heights to be the same */
+    height: 200px;
+
+    /* creates photo frame */
+    border: 15px solid black;
+    padding: 10px;
+    background: white;
+    margin-right: 10px;
+}
+
+.photo img {
+    /* fills possible height */
+    height: 100%;
+}
+

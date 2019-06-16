@@ -1,0 +1,10 @@
+<%
+    data = { key: image_path('black_key.svg') }
+%>
+<div class="container">
+    <h2>Portfolio</h2>
+    <%= content_tag :div, id: "portfolio-data", data: data.to_json do %>
+    <% end %>
+</div>
+
+<%= javascript_pack_tag 'portfolio' %>
