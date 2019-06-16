@@ -1,0 +1,38 @@
+.container {
+    /* centers poems and heading */
+    width: 100%;
+    text-align: center;
+}
+
+.centering {
+    /* creates scroll box */
+    height: 66vh;
+    overflow: scroll;
+
+    /* creates gutter on side */
+    padding: 0 20px;
+}
+
+.poem {
+    /* spacing at top provides a whiter background for text with gradient */
+    padding-top: 20px;
+
+    /* box style for each poem */
+    border-bottom: 3px solid #000000;
+    background: linear-gradient(transparent,rgba(255,255,255,0.6), rgba(255,255,255,0.6));
+    border-radius: 0 0 7px 7px;
+
+    /* stretches content to full size */
+    width: 100%;
+}
+
+.poemText, .poemText pre {
+    /* centers content */
+    display: flex;
+    flex-direction: column;
+
+    /* text styles */
+    font-family: 'Arvo', serif;
+    text-decoration: none;
+    color: black;
+}

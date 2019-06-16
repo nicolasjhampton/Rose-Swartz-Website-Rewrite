@@ -1,0 +1,75 @@
+.about {
+  /* expands container to full width of parent */
+  width: 100%;
+
+  /* pulls container into header fadeout and to bottom of page */
+  height: 80vh;
+  margin-top: -5vh;
+
+  /* grid layout of child containers */
+  display: inline-grid;
+  grid-template-columns: 100%;
+  grid-template-rows: 15% auto 250px;
+  @media (min-width: 720px) {
+    grid-template-columns: 52% 48%;
+    grid-template-rows: 50px auto 50px;
+  }
+}
+
+.artistPicture, .summary {
+  /* easily centers with flex properties */
+  display: inline-flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.artistPicture {
+  /* position in parent grid */
+  grid-column: 1;
+  grid-row: 2;
+
+  /* position in parent grid */
+  @media (min-width: 720px) {
+    grid-column: 1;
+    grid-row: 2;
+  }
+}
+
+.summary {
+  /* position in parent grid */
+  grid-column: 1;
+  grid-row: 3;
+
+  /* position in parent grid */
+  @media (min-width: 720px) {
+    grid-column: 2;
+    grid-row: 2;
+  }
+}
+
+.artistSummary {
+  padding: 4% 10%;
+  border-bottom: 3px solid #000000;
+  background: linear-gradient(transparent,rgba(255,255,255,0.6), rgba(255,255,255,0.6));
+  border-radius: 0 0 7px 7px;
+  max-width: 350px;
+}
+
+#profilePicture {
+  background: white;
+  padding: 20px;
+  box-shadow: -5px 5px 5px black;
+  border: 15px solid #000;
+  width: 200px;
+  @media (min-width: 720px) {
+    width: 320px;
+  }
+}
+
+#bio {
+  display: inline;
+  font-family: 'Arvo', serif;
+  text-align: center;
+  vertical-align: top;
+}
