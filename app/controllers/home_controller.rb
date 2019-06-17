@@ -1,5 +1,10 @@
 class HomeController < ApplicationController
   def index
-    render 'index', locals: { name: "Rose" }
+    bio = Bio.first
+    render 'index', locals: {
+      name: bio.full_name,
+      summary: bio.summary,
+      email: bio.email,
+    }
   end
 end
