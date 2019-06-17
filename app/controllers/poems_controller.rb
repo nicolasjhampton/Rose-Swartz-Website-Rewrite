@@ -1,5 +1,6 @@
 class PoemsController < ApplicationController
   def index
-    render 'index'
+    poems = Poem.all.load
+    render 'index', locals: { poems: poems }
   end
 end
