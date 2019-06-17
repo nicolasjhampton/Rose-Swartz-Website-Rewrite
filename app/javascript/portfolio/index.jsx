@@ -1,37 +1,21 @@
 import React, { useState } from 'react'
 import PropTypes from 'prop-types'
+import { Portfolio } from './portfolio'
 
-const Portfolio = (props) => {
-
-    const portfolio = props.portfolio;
+const App = (props) => {
 
     return (
-        <div className="portfolio">
-            {portfolio.map((gallery, index) => {
-                return (
-                    <div className="gallery">
-                        <h3>{gallery.name}</h3>
-                        <div className="photos">
-                            {gallery.photos.map((image, imgIndex) => {
-                                return (
-                                    <div key={imgIndex + image.source} className="photo">
-                                        <img src={image.source} />
-                                    </div>
-                                );
-                            })}
-                        </div>
-                    </div>
-                );
-            })}
-        </div>
+    <React.Fragment>
+        <Portfolio {...props} />
+    </React.Fragment>
     );
 }
 
-// About.defaultProps = {
-//     name: 'David'
-// }
-// About.propTypes = {
-//     name: PropTypes.string
-// }
+App.defaultProps = {
+    portfolio: []
+}
+App.propTypes = {
+    portfolio: PropTypes.array
+}
 
-export { Portfolio };
+export { App };
